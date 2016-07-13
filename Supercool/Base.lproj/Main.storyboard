@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Supercool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space" translatesAutoresizingMaskIntoConstraints="NO" id="YSZ-aQ-zM6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPs-gn-2cB">
+                                <rect key="frame" x="120" y="319" width="135" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="make me supercool">
+                                    <color key="titleColor" red="0.94901960784313721" green="0.62352941176470589" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makemenotsouncool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="No8-Hz-aGo"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boom-App" translatesAutoresizingMaskIntoConstraints="NO" id="oQa-lA-lTs">
+                                <rect key="frame" x="10" y="0.0" width="354" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="ehf-oo-w7v"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oQa-lA-lTs" firstAttribute="centerX" secondItem="cPs-gn-2cB" secondAttribute="centerX" id="0it-Z7-fl9"/>
+                            <constraint firstItem="oQa-lA-lTs" firstAttribute="top" secondItem="YSZ-aQ-zM6" secondAttribute="top" id="4Vy-xm-8d9"/>
+                            <constraint firstItem="YSZ-aQ-zM6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="8D4-CV-OV0"/>
+                            <constraint firstItem="oQa-lA-lTs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="NGt-mQ-7Zg"/>
+                            <constraint firstItem="oQa-lA-lTs" firstAttribute="centerX" secondItem="YSZ-aQ-zM6" secondAttribute="centerX" id="U5I-eC-glv"/>
+                            <constraint firstItem="cPs-gn-2cB" firstAttribute="top" secondItem="oQa-lA-lTs" secondAttribute="bottom" constant="88" id="e2B-BX-spC"/>
+                            <constraint firstItem="oQa-lA-lTs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fOU-Rf-mC5"/>
+                            <constraint firstItem="YSZ-aQ-zM6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gI2-As-Pja"/>
+                            <constraint firstItem="oQa-lA-lTs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nTK-63-s6C"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="coolbg" destination="YSZ-aQ-zM6" id="Ddd-G9-gco"/>
+                        <outlet property="coollogo" destination="oQa-lA-lTs" id="iMM-Dh-nkh"/>
+                        <outlet property="uncoolbutton" destination="cPs-gn-2cB" id="nxc-vW-HcU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="341.5" y="367.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Boom-App" width="263" height="54"/>
+        <image name="space" width="300" height="300"/>
+    </resources>
 </document>
